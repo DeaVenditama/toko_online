@@ -37,6 +37,6 @@
     </main><!-- /.container -->
     <script src="<?= base_url('jquery-3.5.1.min.js') ?>"></script>
     <script src="<?= base_url('bootstrap-4.0.0/dist/js/bootstrap.min.js') ?>"></script>
-    
+    <?= $this->renderSection('script') ?>
   </body>
 </html>

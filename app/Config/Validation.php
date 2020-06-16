@@ -68,6 +68,27 @@ class Validation
 		],
 	];
 
+	public $transaksi = [
+		'id_barang' => [
+			'rules' => 'required',
+		],
+		'id_pembeli' => [
+			'rules' => 'required',
+		],
+		'jumlah'=> [
+			'rules' => 'required',
+		],
+		'total_harga'=> [
+			'rules' => 'required',
+		],
+		'alamat'=> [
+			'rules' => 'required',
+		],
+		'ongkir'=> [
+			'rules' => 'required',
+		]
+	];
+
 	public $login_errors = [
 		'username' => [
 			'required' =>'{field} Harus Diisi',
