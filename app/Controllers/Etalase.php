@@ -45,8 +45,12 @@ class Etalase extends BaseController
 				$barangModel = new \App\Models\BarangModel();
 				$id_barang = $this->request->getPost('id_barang');
 				$jumlah_pembelian = $this->request->getPost('jumlah');
+
 				$barang = $barangModel->find($id_barang);
 				$entityBarang = new \App\Entities\Barang();
+				//disini kurang di part 5
+				$entityBarang->id = $id_barang;
+				//
 				$entityBarang->stok = $barang->stok-$jumlah_pembelian;
 				$barangModel->save($entityBarang);
 
