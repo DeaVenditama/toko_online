@@ -24,6 +24,9 @@
           <li class="nav-item">
               <a class="nav-link" href="<?= site_url('transaksi/index')?>">Transaksi</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link" href="<?= site_url('user/index')?>">User</a>
+          </li>
           <?php else: ?>
             <li class="nav-item">
               <a class="nav-link" href="<?= site_url('etalase/index')?>">Etalase</a>
