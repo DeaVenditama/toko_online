@@ -116,6 +116,38 @@
 			<?= form_close() ?>
 		</div>
 	</div>
+	<div class="row mb-3 mt-3">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<div class="row">
+						<div class="col-md-6">
+							<h4>Komentar</h4>
+						</div>
+						<div class="col-md-6 text-right">
+							<a href="<?= site_url('Komentar/create/'.$model->id) ?>" class="btn btn-link">Tinggalkan Komentar</a>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-12">
+							<?php foreach($komentar as $k): ?>
+								<?php
+									$modelUser = new \App\Models\UserModel();
+									$namaUser = $modelUser->find($k->id_user)->username;
+								?>
+								<strong><?= $namaUser ?></strong>
+								<br>
+								<?= $k->komentar ?>
+								<hr>
+							<?php endforeach ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <?= $this->endSection() ?>
